@@ -109,7 +109,7 @@ contract Crowdsale is Pausable {
     address public team; // Address at which the team tokens will be sent        
     uint public ethReceivedPresale; // Number of ETH received in presale
     uint public ethReceivedMain; // Number of ETH received in public sale
-    uint public totalTokensSent; // Number of sent to ETH contributors
+    uint public totalTokensSent; // Number of tokens sent to ETH contributors
     uint public startBlock; // Crowdsale start block
     uint public endBlock; // Crowdsale end block
     uint public maxCap; // Maximum number of tokens to sell
@@ -272,7 +272,7 @@ contract Crowdsale is Pausable {
 
     // @notice This function will finalize the sale.
     // It will only execute if predetermined sale time passed or all tokens are sold.
-    // it will faile if minimum cap is not reached
+    // it will fail if minimum cap is not reached
     function finalize() external onlyOwner() {
 
         require(!crowdsaleClosed);        
