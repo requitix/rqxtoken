@@ -159,12 +159,12 @@ contract Crowdsale is Pausable {
     function Crowdsale() public {
         multisig = 0xc15464420aC025077Ba280cBDe51947Fc12583D6; //TODO: Replace address with correct one
         team = 0xc15464420aC025077Ba280cBDe51947Fc12583D6; //TODO: Replace address with correct one                                  
-        minInvestETH = 3 ether;
+        minInvestETH = 1 ether/100;
         startBlock = 0; // Should wait for the call of the function start
         endBlock = 0; // Should wait for the call of the function start                  
-        tokenPriceWei = 1 ether/2000;
+        tokenPriceWei = 1 ether/8000;
         maxCap = 30600000e18;         
-        minCap = 1000 ether;        
+        minCap = 100 ether;        
         setStep(Step.FundingPreSale);
     }
 
@@ -195,10 +195,10 @@ contract Crowdsale is Pausable {
         currentStep = _step;
         
         if (currentStep == Step.FundingPreSale) {  // for presale 
-            tokenPriceWei = 500000000000000;     
-            minInvestETH = 3 ether;                             
+            tokenPriceWei = 1 ether/8000;  
+            minInvestETH = 1 ether/100;                             
         }else if (currentStep == Step.FundingPublicSale) { // for public sale
-            tokenPriceWei = 833333000000000;   
+            tokenPriceWei = 1 ether/5000;   
             minInvestETH = 0;               
         }            
     }

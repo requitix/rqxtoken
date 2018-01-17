@@ -19,7 +19,7 @@
 
 ### How do I run
 
-* owner can start the contract by calling start() function. Argument provided to the start() function is number of blocks. Average block time on main net is around 22 seconds.  
+* owner can start the contract by calling **start()** function. Argument provided to the **start()** function is number of blocks. Average block time on main net is around 30 seconds as of this writing.  
 
 * contributions are accepted by sending ether to contract address 
 
